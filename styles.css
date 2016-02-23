@@ -1,4 +1,8 @@
 @charset "UTF-8";
+
+
+
+
 @font-face {
 font-family: 'flopdesign-kana';
 src: url('/font/flopdesign-kana.eot');
@@ -1046,7 +1050,7 @@ font-size: 1.3rem;
 
 
 
-    
+
     .more-button {
         background-color: #BAD98C;
         background-image: none;
