@@ -1,0 +1,55 @@
+<div class="left-off-canvas-menu">
+  <div class="cmenu">
+    <h3 class="icon-l">メインメニュー</h3>
+    <ul>
+      <li><a href="<$mt:BlogRelativeURL$>"><i class="fa fa-home"></i>ホーム</a></li>
+      <li>
+        <div class="dropdown"><i class="fa fa-pagelines"></i>カテゴリー <i class="fa fa-caret-down fa-sm"></i></div>
+          <ul class="submenu">
+            <li><a href="<$mt:BlogRelativeURL$>news.html"><i class="fa fa-caret-right"></i>一覧</a></li>
+          <mt:Categories>
+            <mt:SetVarBlock name="category_count"><$mt:CategoryCount$></mt:SetVarBlock>
+            <mt:If name="category_count" ne="0">
+            <li><a href="<$mt:CategoryArchiveLink$>"><i class="fa fa-caret-right"></i><$mt:CategoryLabel$></a></li>
+            </mt:If>
+          </mt:Categories>
+          </ul>
+      </li>
+      <mt:Folders>
+      <mt:SetVarBlock name="description"><$mt:FolderDescription$></mt:SetVarBlock>
+      <mt:SetVarBlock name="currentpage"><$mt:FolderLabel$></mt:SetVarBlock>
+      <mt:Unless name="description" eq="footer_link">
+      <li>
+        <div class="dropdown"><i class="fa fa-pagelines"></i><$mt:FolderLabel$> <i class="fa fa-caret-down fa-sm"></i></div>
+          <ul class="submenu">
+          <mt:Pages sort_order="ascend">
+            <li><a href="<$mt:PagePermalink$>"><i class="fa fa-caret-right"></i><$mt:PageTitle$></a></li>
+          </mt:Pages>
+          </ul>
+      </li>
+      </mt:Unless>
+      </mt:Folders>
+      <mt:Pages no_folder="1" sort_order="ascend">
+      <li><a href="<$mt:PagePermalink$>"><i class="fa fa-caret-right"></i><$mt:PageTitle$></a></li>
+      </mt:Pages>
+      <li><a href="<$mt:GetVar name="instagram"$>" target="_blank"><i class="fa fa-caret-right"></i>Instagram</a></li>　　　　　
+    </ul>
+  <ul class="sns balloon-bottom">
+	<li class="facebook"><a class="icon-facebook btn-social" href="http://www.facebook.com/sharer.php?u=http://www.aqualeaf-aroma.com/&amp;t=AquaLeaf AROMA" rel="nofollow"  onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-facebook"></i></a>
+	</li>
+	<li class="twitter"><a class="icon-twitter btn-social" href="http://twitter.com/share?text=AquaLeaf AROMA&amp;url=http://www.aqualeaf-aroma.com/"  onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-twitter"></i></a>
+	</li>
+	<li class="google-plus"><a class="icon-google-plus btn-social" href="https://plus.google.com/share?url=http://www.aqualeaf-aroma.com/&amp;t=AquaLeaf AROMA" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+<i class="fa fa-google-plus"></i></a></li>
+<li class="pocket">
+<a class="btn-social" href="http://getpocket.com/edit?url=http://www.aqualeaf-aroma.com/&title=AquaLeaf AROMA" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-get-pocket"></i></a></li>
+</ul>
+  </div>
+
+</div><!-- left-off-canvas-menu -->
+
+<a class="exit-off-canvas"></a>
