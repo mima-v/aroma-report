@@ -1,0 +1,205 @@
+id: "2016ver7"
+label: "2016ver7"
+version: "1.0.0"
+author_link: "https://www.aqualeaf-aroma.com/"
+author_name: "AquaLeaf AROMA - アクアリーフアロマ -"
+description: "2016ver7"
+class: "blog"
+elements:
+  blog_static_files:
+    component: '~'
+    data:
+      - css
+      - font
+      - images
+      - js
+    importer: blog_static_files
+  custom_fields:
+    component: commercial
+    data:
+      content_bottom:
+        default: 0
+        description: 挿入するウェブページを選択。
+        name: 記事下に挿入するページ
+        obj_type: page
+        options: ''
+        required: 0
+        type: checkbox
+      content_comment:
+        default: ''
+        description: 吹き出しのコメント欄
+        name: コメント
+        obj_type: post
+        options: ''
+        required: 0
+        type: textarea
+      entry_pickup:
+        default: 0
+        description: ''
+        name: PickUp
+        obj_type: post
+        options: ''
+        required: 0
+        type: checkbox
+      footer_menu:
+        default: 0
+        description: フッターメニューだけに表示する場合にチェックを入れます。
+        name: フッターメニューにのみ表示
+        obj_type: page
+        options: ''
+        required: 0
+        type: checkbox
+      link_only:
+        default: 0
+        description: リンクからのみ動線を作りたいページ
+        name: メニューには表示しない
+        obj_type: page
+        options: ''
+        required: 0
+        type: checkbox
+      ogimage:
+        default: ''
+        description: ''
+        name: og:image用画像
+        obj_type: post
+        options: ''
+        required: 0
+        type: asset_image
+    importer: custom_fields
+  template_set:
+    component: core
+    data:
+      base_path: templates
+      templates:
+        archive:
+          category_entry_listing:
+            filename: category_entry_listing.mtml
+            label: カテゴリ別ブログ記事リスト
+            mappings:
+              category:
+                archive_type: Category
+                file_template: "%-c/%i"
+                preferred: 1
+          monthly_entry_listing:
+            filename: monthly_entry_listing.mtml
+            label: 月別ニュース記事リスト
+            mappings:
+              monthly:
+                archive_type: Monthly
+                file_template: "%y/%m/%i"
+                preferred: 1
+          yearly_entry_listing:
+            filename: yearly_entry_listing.mtml
+            label: 年別アーカイブリスト
+            mappings:
+              yearly:
+                archive_type: Yearly
+                file_template: "%y/%i"
+                preferred: 1
+        index:
+          css_jquery_bxslider_css:
+            filename: css/jquery.bxslider.css.mtml
+            label: bxスライダー
+            outfile: css/jquery.bxslider.css
+            rebuild_me: 1
+          feed_recent:
+            filename: atom.xml.mtml
+            label: 最新記事のフィード
+            outfile: atom.xml
+            rebuild_me: 1
+          js_sns_js:
+            filename: js/sns.js.mtml
+            label: SNS_script
+            outfile: js/sns.js
+            rebuild_me: 1
+          main_index:
+            filename: index.html.mtml
+            label: メインページ
+            outfile: index.html
+            rebuild_me: 1
+          news:
+            filename: blog.html.mtml
+            label: ブログ TOP
+            outfile: blog.html
+            rebuild_me: 1
+          styles:
+            filename: styles.css.mtml
+            label: スタイルシート
+            outfile: styles.css
+            rebuild_me: 1
+        individual:
+          entry:
+            filename: entry.mtml
+            label: 記事
+            mappings:
+              individual:
+                archive_type: Individual
+                file_template: "%y/%m/%-f"
+                preferred: 1
+        module:
+          config:
+            filename: config.mtml
+            label: config
+          entry-list:
+            filename: entry-list.mtml
+            label: entry-list
+          footer:
+            filename: footer.mtml
+            label: footer
+          footer-script:
+            filename: footer-script.mtml
+            label: footer-script
+          google_adsense:
+            filename: google_adsense.mtml
+            label: Google AdSense
+          google_adsense_1:
+            filename: google_adsense_1.mtml
+            label: Google AdSense記事
+          google_adsense_2:
+            filename: google_adsense_2.mtml
+            label: Google AdSenseバナー
+          google_adsense_3:
+            filename: google_adsense_3.mtml
+            label: Google AdSenseモバイル
+          google_analytics:
+            filename: google_analytics.mtml
+            label: Google Analytics
+          header-menu:
+            filename: header-menu.mtml
+            label: header-menu
+          information:
+            filename: information.mtml
+            label: information
+          instagram:
+            filename: instagram.mtml
+            label: instagram
+          left-menu:
+            filename: left-menu.mtml
+            label: left-menu
+          news-sidebar:
+            filename: news-sidebar.mtml
+            label: news-sidebar
+          profile:
+            filename: profile.mtml
+            label: profile
+          recommend:
+            filename: recommend.mtml
+            label: recommend
+          twitter:
+            filename: twitter.mtml
+            label: twitter
+        page:
+          webpage:
+            filename: webpage.mtml
+            label: ウェブページ
+            mappings:
+              page:
+                archive_type: Page
+                file_template: "%-c/%-f"
+                preferred: 1
+        system:
+          404_error:
+            filename: 404_error.mtml
+            label: 404 エラー
+    importer: template_set
+

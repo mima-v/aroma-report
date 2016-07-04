@@ -1,0 +1,25 @@
+<mt:Entries paginate_by="$paginate">
+<div class="entry">
+  <a href="<$mt:EntryPermalink$>"><img src="<mt:If tag="CustomFieldValue" identifier="ogimage"><mt:CustomFieldAsset identifier="ogimage"><$mt:AssetThumbnailURL width="480"$></mt:CustomFieldAsset><mt:Else><mt:EntryAssets type="image" sort_order="ascend" limit="1"><$mt:AssetThumbnailURL width="480"$><mt:Else><$mt:BlogURL encode_html="1"$>images/ogimage.png</mt:EntryAssets></mt:If>"></a>
+  <h3><a href="<$mt:EntryPermalink$>"><$mt:EntryTitle$></a></h3>
+<div class="entry-meta"><span><$mt:EntryDate format="%Y.%m.%d"$></span> <mt:EntryCategories type="primary"><a href="<$mt:CategoryArchiveLink$>" class="category <$mt:CategoryBasename default="no_category" separator="_"$>"><$mt:CategoryLabel encode_html="1"$></a></mt:EntryCategories><br />
+<div class="entry-list-text">
+<$mt:EntryExcerpt words="110" $>
+</div>
+</div>
+  <p class="text-right"><a href="<$mt:EntryPermalink$>" class="more-button"><i class="fa fa-angle-double-right"></i> 続きを見る</a></p>
+</div>
+
+<mt:EntriesFooter>
+<nav class="page-navigation">
+  <ul class="page-navigation-list">
+    <mt:PaginationHasPrevious>
+    <li class="page-navigation-list-item page-navigation-prev"><a class="newslist-button" href="<$mt:PaginationPreviousURL$>" rel="prev">前の<$mt:GetVar name="paginate"$>件</a></li>
+    </mt:PaginationHasPrevious>
+    <mt:PaginationHasNext>
+    <li class="page-navigation-list-item page-navigation-next"><a class="newslist-button"  href="<$mt:PaginationNextURL$>" rel="next">次の<$mt:GetVar name="paginate"$>件</a></li>
+    </mt:PaginationHasNext>
+  </ul>
+</nav>
+</mt:EntriesFooter>
+</mt:Entries>

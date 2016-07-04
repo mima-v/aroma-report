@@ -1,0 +1,209 @@
+<!DOCTYPE html><$mt:Include module="config"$><html lang="ja">
+<head>
+<meta charset="<$mt:PublishCharset$>">
+<title><$mt:PageTitle encode_html="1"$> <mt:If tag="pagefolder">| <mt:PageFolder><$mt:FolderLabel encode_html="1"$></mt:PageFolder> </mt:If>| <$mt:BlogName encode_html="1"$></title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="<$mt:BlogDescription remove_html="1" encede_html="1"$>">
+<mt:Ignore><meta name="keywords" content="<$mt:GetVar name="metakeywords"$><$mt:EntryKeywords$>"></mt:Ignore>
+<meta name="keywords" content="AquaLeafアロマ,アロマレポート,AROMA,精油,恋する乙女,科学的アロマ">
+<!-- Open Graph Protocol -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="<$mt:BlogLanguage setvar="blog_lang"$><mt:If name="blog_lang" eq="ja">ja_JP<mt:Else><$mt:Var name="blog_lang"$></mt:If>">
+<meta property="og:title" content="<$mt:PageTitle encode_html="1"$> <mt:If tag="pagefolder">| <mt:PageFolder><$mt:FolderLabel encode_html="1"$></mt:PageFolder> </mt:If>| <$mt:BlogName encode_html="1"$>">
+<meta property="og:url" content="<$mt:PagePermalink encode_html="1"$>">
+<meta property="og:description" content="<$mt:BlogDescription remove_html="1" encede_html="1"$>">
+<meta property="og:site_name" content="<$mt:BlogName encode_html="1"$>">
+<meta property="og:image" content="<$mt:BlogURL encode_html="1"$>images/ogimage.png">
+<!-- Microdata -->
+<meta itemprop="description" content="<$mt:BlogDescription remove_html="1" encede_html="1"$>">
+<link rel="shortcut icon" href="<$mt:BlogURL encode_html="1"$>images/favicon.ico">
+<link rel="start" href="<$mt:BlogURL encode_html="1"$>">
+<link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<$mt:Link template="feed_recent"$>">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+<$mt:CanonicalLink$>
+<link itemprop="url" href="<$mt:PagePermalink encode_html="1"$>">
+<link itemprop="image" href="<$mt:BlogURL encode_html="1"$>images/ogimage.png">
+<link href='https://fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="<$mt:BlogURL encode_html="1"$>css/animate.css">
+<link rel="stylesheet" href="<$mt:BlogURL encode_html="1"$>css/normalize.css">
+<link rel="stylesheet" href="<$mt:BlogURL encode_html="1"$>css/foundation.min.css">
+<link rel="stylesheet" href="<$mt:BlogURL encode_html="1"$>styles.css">
+<script src="<$mt:BlogURL encode_html="1"$>js/modernizr.js"></script>
+<$mt:Include module="Google Analytics"$>
+<$mt:Include module="Google AdSenseモバイル"$>
+</head>
+
+<body class="webpage">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8818780178118879",
+    enable_page_level_ads: true
+  });
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4&appId=560473280734238";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<mt:SetVarBlock name="thisfolder"><mt:PageFolder><$mt:FolderLabel$></mt:PageFolder></mt:SetVarBlock>
+<mt:SetVarBlock name="thispage"><$mt:PageTitle$></mt:SetVarBlock>
+
+<div class="off-canvas-wrap">
+<div class="inner-wrap">
+
+<$mt:Include module="header-menu"$>
+<div class="row">
+  <div class="columns medium-12">
+    <div class="header text-center hide-logo">
+      <h1><a href="<$mt:BlogRelativeURL$>"><!--<img src="<$mt:BlogURL encode_html="1"$>images/logo.png" alt="" class="logo" width="150"><br />-->AquaLeaf AROMA</a></h1>
+    <p>恋する乙女のための科学的アロマのススメ - 日常生活をより良いものに - </p>
+    </div>
+  </div><!-- columns -->
+</div><!-- row -->
+
+  <div class="medium-12">
+<div id="mainvisual">
+      <mt:Ignore><img src="<$mt:BlogURL encode_html="1"$>images/slide01.jpg" alt="" width="0" height="0"></mt:Ignore>
+      <div class="page-banner">
+        <div class="inner">
+        <h2 class="row"><i class="fa fa-smile-o"></i> <$mt:PageTitle$></h2>
+        </div>
+      </div>
+</div><!-- mainvisual -->
+  </div><!-- columns -->
+
+<div class="row">
+  <div class="columns large-1">
+<ul class="sns balloon-bottom">
+	<mt:If name="socialButtonFacebook">
+    <li class="entry-social-facebook">
+      <div class="fb-like"
+        data-layout="box_count"
+        data-action="like"
+        data-show-faces="false"
+        data-share="false">
+      </div>
+    </li>
+  </mt:If>
+  <mt:If name="socialButtonGoogle">
+    <li class="google-plus">
+      <div class="g-plusone"
+        data-size="tall"
+        data-annotation="bubble"
+        data-href="<$mt:EntryPermalink$>">
+      </div>
+    </li>
+  </mt:If>
+  <mt:If name="socialButtonPocket">
+    <li class="pocket">
+      <a data-pocket-label="pocket"
+        data-save-usr="<$mt:EntryPermalink$>"
+        data-pocket-count="vertical"
+        class="pocket-btn"
+        data-lang="en">
+      </a>
+    </li>
+  </mt:If>
+  <mt:If name="socialButtonLine">
+<li class="entry-social-line">
+  <span>
+<script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script>
+<script type="text/javascript">
+new media_line_me.LineButton({"pc":false,"lang":"ja","type":"a"});
+</script>
+</span>
+  </li>
+</mt:If>
+	<li class="twitter"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	</li>
+  </ul>
+  </div>
+  <div class="columns medium-8 large-8">
+    <div id="content">
+      <article id="webpage-body">
+        <div class="container">
+        <$mt:PageBody$>
+        <$mt:Include module="Google AdSense記事"$>
+        <$mt:PageMore$>
+        </div>
+      </article>
+    </div>
+  </div><!-- columns -->
+  <div class="columns medium-4 large-3">
+    <$mt:Include module="news-sidebar"$>
+  </div><!-- columns -->
+</div><!-- row -->
+
+<$mt:Include module="footer"$>
+
+<$mt:Include module="left-menu"$>
+
+</div><!-- inner-wrap -->
+</div><!-- off-canvas-wrap -->
+
+<$mt:Include module="footer-script"$>
+<mt:If name="socialButtonFacebook">
+  <script type="text/javascript">
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4&appId=<$mt:Var name='fbAppId'$>";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+</mt:If>
+
+<mt:If name="socialButtonGoogle">
+  <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script');
+    po.type = 'text/javascript';
+    po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+  })();
+  </script>
+</mt:If>
+
+<mt:If name="socialButtonHatena">
+  <script type="text/javascript" src="//b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+</mt:If>
+
+<mt:If name="socialButtonPocket">
+  <script type="text/javascript">
+  !function(d, i) {
+    if (!d.getElementById(i)) {
+      var j = d.createElement("script");
+      j.id = i;
+      j.src = "https://widgets.getpocket.com/v1/j/btn.js?v=1";
+      var w = d.getElementById(i);
+      d.body.appendChild(j);
+    }
+  }(document, "pocket-btn-js");
+  </script>
+</mt:If>
+
+<mt:If name="socialButtonLine">
+  <script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script>
+</mt:If>
+
+</body>
+</html>
